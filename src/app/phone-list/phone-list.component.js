@@ -4,7 +4,7 @@
 angular.
   module('phoneList').
   component('phoneList', {
-    templateUrl: 'http://localhost:7001/app/phone-list/phone-list.template.html',
+    templateUrl: './app/phone-list/phone-list.template.html',
     controller: ['Phone',
       function PhoneListController(Phone) {
         this.phones = Phone.query();

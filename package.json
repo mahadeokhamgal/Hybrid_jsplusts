@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:single-spa:Hybrid_jsplusts": "ng build Hybrid_jsplusts --configuration production",
-    "serve:single-spa:Hybrid_jsplusts": "ng s --project Hybrid_jsplusts --disable-host-check --port 7001 --live-reload false"
+    "serve:single-spa:Hybrid_jsplusts": "ng s --project Hybrid_jsplusts --disable-host-check --host 127.0.0.1 --port 7001 --live-reload false"
   },
   "private": true,
   "dependencies": {
