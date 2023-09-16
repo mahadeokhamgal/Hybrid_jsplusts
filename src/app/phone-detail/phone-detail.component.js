@@ -1,14 +1,15 @@
 'use strict';
-
+import { assetUrl, baseUrl } from '../../single-spa/asset-url.js';
 // Register `phoneDetail` component, along with its associated controller and template
 angular.
   module('phoneDetail').
   component('phoneDetail', {
-    templateUrl: 'phone-detail/phone-detail.template.html',
+    templateUrl: baseUrl('phone-detail/phone-detail.template.html'),
     controller: ['$routeParams', 'Phone',
       function PhoneDetailController($routeParams, Phone) {
         var self = this;
         self.phone = Phone.get({phoneId: $routeParams.phoneId}, function(phone) {
+          console.log("phone's are", phone);
           self.setImage(phone.images[0]);
         });
 
