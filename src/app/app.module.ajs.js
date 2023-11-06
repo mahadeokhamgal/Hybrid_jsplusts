@@ -11,6 +11,8 @@ import './phone-detail/phone-detail.component';
 import './phone-list/phone-list.module';
 import './phone-list/phone-list.component';
 
+import './core/checkmark/checkmark.filter';
+
 // Define the `phonecatApp` module
 export default angular.module('phonecatApp', [
   'ngAnimate',
