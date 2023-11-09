@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { UpgradeModule } from '@angular/upgrade/static';
 import { PhonecatAppComponent } from './phonecat-app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { Test } from './test.service';
+import { Phone } from 'src/app-ajs/core/phone/phone.service';
 
 @NgModule({
   imports: [
@@ -14,7 +14,7 @@ import { Test } from './test.service';
   declarations:[
     PhonecatAppComponent
   ],
-  providers:[ Test ],
+  providers:[ Phone ],
   bootstrap:[
     PhonecatAppComponent
   ]

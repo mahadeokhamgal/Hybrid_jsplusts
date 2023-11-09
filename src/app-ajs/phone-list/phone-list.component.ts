@@ -7,7 +7,11 @@ angular.
     templateUrl: './app-ajs/phone-list/phone-list.template.html',
     controller: ['Phone',
       function PhoneListController(Phone) {
-        this.phones = Phone.query();
+        Phone.query().subscribe(data => {
+          console.log("subscribe after query");
+          
+          this.phones = data;
+        });
         this.orderProp = 'age';
       }
     ]

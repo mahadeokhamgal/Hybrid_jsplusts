@@ -4,7 +4,7 @@ import './core/core.module';
 import './phone-detail/phone-detail.module';
 import './phone-list/phone-list.module';
 import { downgradeInjectable } from '@angular/upgrade/static';
-import { Test } from 'src/app/test.service';
+import { Phone } from './core/phone/phone.service';
 
 // Define the `phonecatApp` module
 angular.module('phonecatApp', [
@@ -14,4 +14,4 @@ angular.module('phonecatApp', [
   'phoneDetail',
   'phoneList'
 ])
-.factory('Test', downgradeInjectable(Test));//both service or factory def works
+.factory('Phone', downgradeInjectable(Phone));//both service or factory def works

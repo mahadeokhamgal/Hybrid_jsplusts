@@ -5,10 +5,10 @@ angular.
   module('phoneDetail').
   component('phoneDetail', {
     templateUrl: './app-ajs/phone-detail/phone-detail.template.html',
-    controller: ['$routeParams', 'Test',
-      function PhoneDetailController($routeParams, Test) {
+    controller: ['$routeParams', 'Phone',
+      function PhoneDetailController($routeParams, Phone) {
         var self = this;
-        Test.get($routeParams.phoneId).subscribe(function(phone) {
+        Phone.get($routeParams.phoneId).subscribe(function(phone) {
           console.log("callback for get", phone);
           console.log("self is", self);
           self.phone = phone;
