@@ -5,5 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './phonecat-app.component.html'
 })
 export class PhonecatAppComponent {
-
+    constructor(){
+        console.log("converted entry comp");
+        
+    }
 }

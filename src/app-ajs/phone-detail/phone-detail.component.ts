@@ -5,10 +5,13 @@ angular.
   module('phoneDetail').
   component('phoneDetail', {
     templateUrl: './app-ajs/phone-detail/phone-detail.template.html',
-    controller: ['$routeParams', 'Phone',
-      function PhoneDetailController($routeParams, Phone) {
+    controller: ['$routeParams', 'Test',
+      function PhoneDetailController($routeParams, Test) {
         var self = this;
-        self.phone = Phone.get({phoneId: $routeParams.phoneId}, function(phone) {
+        Test.get($routeParams.phoneId).subscribe(function(phone) {
+          console.log("callback for get", phone);
+          console.log("self is", self);
+          self.phone = phone;
           self.setImage(phone.images[0]);
         });
 
