@@ -13,5 +13,4 @@ angular.module('phonecatApp', [
   'core',
   'phoneDetail',
   'phoneList'
-])
-.factory('Phone', downgradeInjectable(Phone));//both service or factory def works
+]);
