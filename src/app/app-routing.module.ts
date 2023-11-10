@@ -6,9 +6,9 @@ import { APP_BASE_HREF, LocationStrategy, HashLocationStrategy } from '@angular/
 import { PhoneDetailComponent } from './phone-detail/phone-detail.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'phones', pathMatch: 'full' },
+  // { path: '', redirectTo: 'phones', pathMatch: 'full' },
   // { path: 'phones',          component: PhoneListComponent },
-  { path: 'phones/:phoneId', component: PhoneDetailComponent }
+  // { path: 'phones/:phoneId', component: PhoneDetailComponent }
 ];
 
 @NgModule({
