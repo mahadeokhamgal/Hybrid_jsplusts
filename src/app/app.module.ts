@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { Phone } from './core/phone/phone.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { AppComponent } from './app.component';
     UpgradeModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    Phone
+  ],
   bootstrap: []
 })
 export class AppModule {

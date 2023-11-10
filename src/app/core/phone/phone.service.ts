@@ -58,12 +58,9 @@ export interface PhoneData {
 export class Phone {
   constructor(private http: HttpClient) { }
   query(): Observable<PhoneData[]> {
-    return this.http.get<PhoneData[]>(`phones/phones.json`);
+    return this.http.get<PhoneData[]>(`assets/phones/phones.json`);
   }
   get(id: string): Observable<PhoneData> {
-    return this.http.get<PhoneData>(`phones/${id}.json`);
+    return this.http.get<PhoneData>(`assets/phones/${id}.json`);
   }
 }
-
-angular.module('core.phone')
-  .factory('phone', downgradeInjectable(Phone));

@@ -7,7 +7,9 @@ angular.
     templateUrl: './app/phone-list/phone-list.template.html',
     controller: ['Phone',
       function PhoneListController(Phone) {
-        this.phones = Phone.query();
+        Phone.query().subscribe(data => {
+          this.phones = data;
+        });
         this.orderProp = 'age';
       }
     ]
