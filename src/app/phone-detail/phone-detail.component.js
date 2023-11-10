@@ -4,7 +4,7 @@
 angular.
   module('phoneDetail').
   component('phoneDetail', {
-    templateUrl: './app-ajs/phone-detail/phone-detail.template.html',
+    templateUrl: './app/phone-detail/phone-detail.template.html',
     controller: ['$routeParams', 'Phone',
       function PhoneDetailController($routeParams, Phone) {
         var self = this;

@@ -23,19 +23,12 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/app",
-              "src/app-ajs"
+              "src/app"
             ],
             "styles": [
-              "./node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
             ],
-            "scripts": [
-              "./node_modules/angular/angular.js",
-              "./node_modules/angular-animate/angular-animate.js",
-              "./node_modules/angular-resource/angular-resource.js",
-              "./node_modules/angular-route/angular-route.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -95,15 +88,9 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
             ],
-            "scripts": [
-              "./node_modules/angular/angular.js",
-              "./node_modules/angular-animate/angular-animate.js",
-              "./node_modules/angular-resource/angular-resource.js",
-              "./node_modules/angular-route/angular-route.js"
-            ]
+            "scripts": []
           }
         }
       }
