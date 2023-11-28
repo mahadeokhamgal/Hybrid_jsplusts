@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import * as angular from 'angular';
@@ -56,7 +56,14 @@ export interface PhoneData {
 
 @Injectable()
 export class Phone {
-  constructor(private http: HttpClient) { }
+  public event$: EventEmitter<any>;
+  public event2$: EventEmitter<any>;
+  constructor(private http: HttpClient) {
+    this.event$ = new EventEmitter();
+   }
+   emitEvent(data){
+    this.event$.emit(data);
+   }
   query(): Observable<PhoneData[]> {
     return this.http.get<PhoneData[]>(`assets/phones/phones.json`);
   }

@@ -9,8 +9,11 @@ angular.
       function PhoneListController(Phone) {
         Phone.query().subscribe(data => {
           this.phones = data;
+          console.log("emmiting event for Phone");
+          Phone.emitEvent("phonelist");
         });
         this.orderProp = 'age';
+        Phone.event$.subscribe(item =>  console.log("Event caught in phone list js data passed was => ", item))
       }
     ]
   });

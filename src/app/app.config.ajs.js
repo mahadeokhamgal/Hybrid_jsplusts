@@ -5,7 +5,7 @@ export default function(appModule) {
             template: '<phone-list></phone-list>'
             }).
             when('/phones/:phoneId', {
-            template: '<phone-detail></phone-detail>'
+            template: '<phone-list></phone-list><phone-detail></phone-detail>'
             }).
             otherwise('/phones');
     });
