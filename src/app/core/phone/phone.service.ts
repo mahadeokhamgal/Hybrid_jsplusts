@@ -58,8 +58,14 @@ export interface PhoneData {
 export class Phone {
   public event$: EventEmitter<any>;
   public event2$: EventEmitter<any>;
+  public stateObj: any;
   constructor(private http: HttpClient) {
+    this.stateObj = {"id":1, "setBy": "phoneService"};
     this.event$ = new EventEmitter();
+    setTimeout(()=>{
+      this.emitEvent("Phonelist service emiting event");
+      this.stateObj = {"id":1, "setBy": "phoneService"};
+    }, 4000)
    }
    emitEvent(data){
     this.event$.emit(data);

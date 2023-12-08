@@ -9,11 +9,16 @@ angular.
       function PhoneListController(Phone) {
         Phone.query().subscribe(data => {
           this.phones = data;
-          console.log("emmiting event for Phone");
-          Phone.emitEvent("phonelist");
+          
+          setTimeout(()=>{
+            console.log("emmiting event for Phone");
+            Phone.stateObj = {"id":3, "setBy": "phonelistjs"}
+            Phone.emitEvent("phonelist");
+            
+          }, 10000)
         });
         this.orderProp = 'age';
-        Phone.event$.subscribe(item =>  console.log("Event caught in phone list js data passed was => ", item))
+        Phone.event$.subscribe(item =>  console.log("Event caught in phone list js data passed was => ", Phone.stateObj))
       }
     ]
   });

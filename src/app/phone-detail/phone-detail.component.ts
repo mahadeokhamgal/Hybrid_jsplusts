@@ -20,14 +20,14 @@ export class PhoneDetailComponent {
 
       this.setImage(data.images[0]);
     });
-    phone.event$.subscribe(item => { console.log("Event caught in phone detail data passed was => ", item) }
+    phone.event$.subscribe(item => { console.log("Event caught in phone detail state now is => ", phone.stateObj) }
     );
 
     setTimeout(()=>{
-      console.log("broadcasting from typscript one");
-      
+      console.log("broadcasting from phone detail typscript one");
+      phone.stateObj = {"id":2, "setBy": "phonedetailts"}
       phone.emitEvent("phone-detail data");
-    }, 5000)
+    }, 6000)
   }
 
   setImage(imageUrl) {
